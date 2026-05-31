@@ -1,0 +1,116 @@
+# Car Price Prediction Using Machine Learning
+
+## Project Overview
+
+This project develops and evaluates machine learning models for predicting vehicle prices using vehicle characteristics such as brand, model, year, engine size, fuel type, transmission type, mileage, and condition.
+
+The objective is to demonstrate a complete machine learning workflow including data exploration, preprocessing, model training, hyperparameter tuning, cross-validation, model evaluation, and scalability planning.
+
+---
+
+## Dataset
+
+The dataset contains approximately 2,500 vehicle records and includes the following features:
+
+* Car ID
+* Brand
+* Model
+* Year
+* Engine Size
+* Fuel Type
+* Transmission
+* Mileage
+* Condition
+* Price (Target Variable)
+
+The goal is to predict vehicle price using the available vehicle characteristics.
+
+---
+
+## Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Scikit-learn
+* Jupyter Notebook
+
+---
+
+## Methodology
+
+### 1. Data Exploration
+
+The dataset was explored to understand its structure, identify data types, and evaluate feature distributions.
+
+### 2. Data Preprocessing
+
+Categorical variables were converted to numerical features using one-hot encoding. The Car ID field was removed because it does not provide predictive value.
+
+### 3. Model Development
+
+The following machine learning models were evaluated:
+
+* Linear Regression
+* Random Forest Regressor
+* Gradient Boosting Regressor
+
+### 4. Cross-Validation
+
+Five-fold cross-validation was used to evaluate model performance and reduce the risk of selecting a model based on a single train-test split.
+
+### 5. Hyperparameter Tuning
+
+GridSearchCV was used to identify the optimal Random Forest configuration by testing multiple parameter combinations.
+
+---
+
+## Results
+
+Correlation analysis revealed extremely weak relationships between the numerical features and vehicle price.
+
+As a result, all machine learning models demonstrated limited predictive performance on unseen data.
+
+Although predictive accuracy was limited, the project successfully demonstrates a complete machine learning workflow and highlights the importance of feature quality in predictive modeling.
+
+---
+
+## Scaling the Prototype
+
+The current implementation uses Scikit-learn and processes approximately 2,500 records on a single machine.
+
+For larger real-world datasets, the workflow could be scaled using distributed machine learning frameworks such as:
+
+* SparkML
+* Dask
+* TensorFlow
+* PyTorch
+
+### Trade-Offs
+
+* Linear Regression trains quickly but may underfit complex relationships.
+* Random Forest and Gradient Boosting can improve predictive performance but require additional computational resources.
+* Distributed frameworks improve scalability but increase infrastructure complexity and cost.
+
+---
+
+## Key Learning Outcomes
+
+* Data preprocessing and feature engineering
+* Machine learning model development
+* Cross-validation techniques
+* Hyperparameter tuning
+* Model evaluation and comparison
+* Overfitting and generalization analysis
+* Machine learning scalability considerations
+
+---
+
+## Author
+
+Christopher Lawrence
+
+University of Maryland Global Campus / Springboard
+
+Machine Learning Engineering and AI Bootcamp
