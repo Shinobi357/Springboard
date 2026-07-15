@@ -105,7 +105,7 @@ Disadvantages:
 
 For this project, the recommended deployment strategy is AWS SageMaker.
 
-AWS SageMaker was used during the bootcamp and provides an end-to-end platform for training, deploying, monitoring, and maintaining machine learning models. SageMaker supports the entire machine learning lifecycle and includes built-in MLOps capabilities that simplify production deployment.
+AWS SageMaker notebooks were used throughout the development and experimentation phases of this project. Because the training workflow was already implemented in SageMaker, deploying the model using SageMaker Endpoints minimizes additional infrastructure while providing integrated monitoring, scalability, and model lifecycle management.
 
 The proposed architecture would include:
 
@@ -281,7 +281,7 @@ Tools:
 
 Machine learning models degrade over time as new data becomes available.
 
-In Production, the model would be retrained when:
+In production, the model would be retrained when:
 
 * Data drift is detected  
 * Model accuracy declines  
