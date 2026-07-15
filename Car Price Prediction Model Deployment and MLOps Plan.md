@@ -22,7 +22,7 @@ Technologies:
 * FastAPI  
 * Flask  
 * Docker
-Docker was selected to package the application and its dependencies into a portable container, ensuring consistent behavior across development, testing, and production environments while simplifying deployment.
+* Docker was selected to package the application and its dependencies into a portable container, ensuring consistent behavior across development, testing, and production environments while simplifying deployment.
 
 Advantages:
 
