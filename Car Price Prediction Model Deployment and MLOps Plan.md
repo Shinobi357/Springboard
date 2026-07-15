@@ -101,11 +101,11 @@ AWS SageMaker was used during the bootcamp and provides an end-to-end platform f
 
 The proposed architecture would include:
 
-* Amazon S3 for data storage  
-* SageMaker for model hosting  
+* Amazon S3 was selected because it provides highly durable, scalable object storage for datasets, trained models, and experiment artifacts. It integrates natively with SageMaker and supports versioning, making it well suited for managing machine learning assets throughout the project lifecycle.
+* Amazon SageMaker was selected because it provides a fully managed environment for model training, deployment, hyperparameter tuning, and monitoring. Since SageMaker was used throughout this project, it minimizes deployment complexity while providing built-in MLOps capabilities.
 * SageMaker Endpoints for real-time predictions  
-* Amazon CloudWatch for monitoring and logging  
-* GitHub for source control  
+* Amazon CloudWatch was selected because it continuously monitors endpoint health, API latency, resource utilization, and prediction requests. Automated alarms allow operational issues to be identified quickly.  
+* GitHub provides version control, collaboration, and traceability of code changes. It also serves as the central repository for documentation and future CI/CD integration.  
 * Jupyter Notebooks for experimentation and model development
 
 This approach provides a scalable, production-ready solution while minimizing infrastructure management requirements.
