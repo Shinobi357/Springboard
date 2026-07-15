@@ -134,28 +134,32 @@ Deployment is not the end of the machine learning lifecycle. It is the beginning
 
 # **Deployment Architecture**
 
-User Input  
-↓  
-Web Application / API  
-↓  
-AWS SageMaker Endpoint  
-↓  
-Trained Machine Learning Model  
-↓  
-Predicted Vehicle Price  
-↓  
-Response Returned to User
+                        +----------------------+
+                        |     User / Client    |
+                        +----------+-----------+
+                                   |
+                             REST API (FastAPI)
+                                   |
+                        +----------v-----------+
+                        |  SageMaker Endpoint  |
+                        +----------+-----------+
+                                   |
+                         Car Price Prediction Model
+                                   |
+                          Predicted Vehicle Price
+                                   |
+                        +----------v-----------+
+                        |   Response to User   |
+                        +----------------------+
 
-Monitoring Layer  
-↓  
-Amazon CloudWatch  
-↓  
-Logs, Metrics, Alerts  
-↓  
-Retraining Pipeline  
-↓  
-Updated Model Deployment
-
+                Monitoring
+      CloudWatch ← Logs ← Endpoint Metrics
+                     |
+             Drift Detection
+                     |
+             Retraining Pipeline
+                     |
+            Updated Model Deployment
 ---
 
 # **Monitoring Strategy**
