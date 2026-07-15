@@ -14,7 +14,7 @@ Several deployment options were evaluated for this project.
 
 ## **Option 1: REST API Deployment**
 
-The trained model is deployed as an API endpoint that receives vehicle information and returns a predicted price. FastAPI was selected because it provides high-performance REST APIs with automatic request validation, interactive API documentation through Swagger/OpenAPI, and excellent support for deploying machine learning models in production environments.
+The trained model would be deployed as an API endpoint that receives vehicle information and returns a predicted price. FastAPI was selected because it provides high-performance REST APIs with automatic request validation, interactive API documentation through Swagger/OpenAPI, and excellent support for deploying machine learning models in production environments.
 
 Technologies:
 
@@ -22,7 +22,10 @@ Technologies:
 * FastAPI  
 * Flask  
 * Docker
-* Docker was selected to package the application and its dependencies into a portable container, ensuring consistent behavior across development, testing, and production environments while simplifying deployment.
+  
+Justification
+  
+Docker was selected to package the application and its dependencies into a portable container, ensuring consistent behavior across development, testing, and production environments while simplifying deployment.
 
 Advantages:
 
@@ -39,13 +42,17 @@ Disadvantages:
 
 ## **Option 2: Web Application Deployment**
 
-The machine learning model is integrated into a web application where users enter vehicle information and receive a predicted vehicle value. React was selected because it enables responsive, component-based user interfaces that can communicate efficiently with the prediction API while providing a modern user experience.
+The machine learning model is integrated into a web application where users enter vehicle information and receive a predicted vehicle value. 
 
 Technologies:
 
 * FastAPI  
 * React  
 * HTML/CSS/JavaScript
+
+Justification
+
+React was selected because it enables responsive, component-based user interfaces that can communicate efficiently with the prediction API while providing a modern user experience.
 
 Advantages:
 
@@ -247,13 +254,13 @@ If vehicle market conditions change significantly, the relationship between vehi
 
 ## **Model Versioning**
 
-Each retrained model will be assigned a unique version identifier. The currently deployed production model will remain available until the newly trained model has passed validation and performance testing. This approach enables rollback if unexpected issues occur after deployment.
+Each retrained model will be assigned a unique version identifier. The currently deployed production model would remain available until the newly trained model has passed validation and performance testing. This approach enables rollback if unexpected issues occur after deployment.
 
 ---
 
 # **Logging Strategy**
 
-The deployment should maintain logs for:
+The deployment would maintain logs for:
 
 * Incoming requests  
 * Prediction outputs  
@@ -274,7 +281,7 @@ Tools:
 
 Machine learning models degrade over time as new data becomes available.
 
-The model should be retrained when:
+In Production, the model would be retrained when:
 
 * Data drift is detected  
 * Model accuracy declines  
