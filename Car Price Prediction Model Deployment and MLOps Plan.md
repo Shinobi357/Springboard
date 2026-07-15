@@ -160,6 +160,46 @@ Deployment is not the end of the machine learning lifecycle. It is the beginning
              Retraining Pipeline
                      |
             Updated Model Deployment
+
+---
+
+# **Pseudocode**
+
+Load new vehicle data
+
+↓
+
+Validate data quality
+
+↓
+
+Preprocess features
+
+↓
+
+Generate predictions
+
+↓
+
+Log request and response
+
+↓
+
+Monitor endpoint performance
+
+↓
+
+Detect model drift
+
+↓
+
+If drift exceeds threshold:
+    Retrain model
+    Evaluate new model
+    Deploy new version
+Else:
+    Continue serving predictions
+
 ---
 
 # **Monitoring Strategy**
@@ -196,6 +236,12 @@ Monitor:
 Example:
 
 If vehicle market conditions change significantly, the relationship between vehicle features and price may change. This could reduce prediction accuracy and require retraining.
+
+---
+
+## **Model Versioning**
+
+Each retrained model will be assigned a unique version identifier. The currently deployed production model will remain available until the newly trained model has passed validation and performance testing. This approach enables rollback if unexpected issues occur after deployment.
 
 ---
 
