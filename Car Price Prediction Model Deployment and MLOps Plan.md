@@ -167,24 +167,43 @@ Deployment is not the end of the machine learning lifecycle. It is the beginning
 # **Pseudocode**
 
 Load vehicle data
+    
     ↓
+
 Validate data
+    
     ↓
+
 Preprocess features
+   
     ↓
+
 Generate prediction
+   
     ↓
+
 Log request
+    
     ↓
+
 Monitor endpoint
+   
     ↓
+
 Detect drift
+    
     ↓
+
 If drift detected:
+    
     Retrain model
+    
     Validate model
+    
     Deploy new version
+
 Else:
+    
     Continue serving predictions
 
 ---
